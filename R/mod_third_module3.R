@@ -10,7 +10,7 @@
 mod_third_module3_ui <- function(id){
   ns <- NS(id)
   tagList(
-    h2("Iris Plot"),
+    h2("USA Arrests"),
     plotOutput(ns("plot"))
   )
 }
@@ -22,7 +22,7 @@ mod_third_module3_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     output$plot <- renderPlot({
-      plot(mtcars)
+      plot(USArrests)
     })
   })
 }
